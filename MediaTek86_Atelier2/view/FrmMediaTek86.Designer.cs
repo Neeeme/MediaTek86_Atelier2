@@ -229,6 +229,7 @@
             this.Controls.Add(this.grbPersonnel);
             this.Name = "FrmMediaTek86";
             this.Text = "FrmMediaTek86";
+            this.Load += new System.EventHandler(this.FrmMediaTek86_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersonnel)).EndInit();
             this.grbLePersonnel.ResumeLayout(false);
             this.grbPersonnel.ResumeLayout(false);

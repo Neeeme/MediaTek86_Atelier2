@@ -221,6 +221,7 @@
             this.Controls.Add(this.grbAbsPersonnel);
             this.Name = "FrmAbsence";
             this.Text = "Absence";
+            this.Load += new System.EventHandler(this.FrmAbsence_Load);
             this.grbAbsence.ResumeLayout(false);
             this.grbAbsence.PerformLayout();
             this.grbAbsPersonnel.ResumeLayout(false);

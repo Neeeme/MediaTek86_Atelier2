@@ -161,6 +161,7 @@
             this.btnDemandeAbsPers.TabIndex = 3;
             this.btnDemandeAbsPers.Text = "absences";
             this.btnDemandeAbsPers.UseVisualStyleBackColor = true;
+            this.btnDemandeAbsPers.Click += new System.EventHandler(this.btnDemandeAbsPers_Click);
             // 
             // btnDemandeSuppPers
             // 

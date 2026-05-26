@@ -186,5 +186,20 @@ namespace MediaTek86.view
                 MessageBox.Show("Veuillez sélectionner une ligne.", "Information");
             }
         }
+
+        private void btnDemandeAbsPers_Click(object sender, EventArgs e)
+        {
+            if (dgvPersonnel.SelectedRows.Count > 0)
+            {
+                Personnel personnelSelectionne = (Personnel)bdgPersonnel.List[bdgPersonnel.Position];
+                FrmAbsence frm = new FrmAbsence(personnelSelectionne);
+                frm.ShowDialog();
+            }
+
+            else
+            {
+                MessageBox.Show("Veuillez sélectionner une ligne.", "Information");
+            }
+        }
     }
 }

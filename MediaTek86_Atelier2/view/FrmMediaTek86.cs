@@ -13,6 +13,10 @@ namespace MediaTek86.view
         /// </summary>
         private BindingSource bdgPersonnel = new BindingSource();
         /// <summary>
+        /// Objet pour pouvoir gérer la liste des services
+        /// </summary>
+        private BindingSource bdgServices = new BindingSource();
+        /// <summary>
         /// Contrôleur de la fenêtre d'authentification
         /// </summary>
         private FrmMediaTek86Controller controller;
@@ -35,6 +39,7 @@ namespace MediaTek86.view
         {
             controller = new FrmMediaTek86Controller();
             RemplirListePersonnel();
+            RemplirListeServices();
         }
 
         /// <summary>
@@ -47,6 +52,16 @@ namespace MediaTek86.view
             dgvPersonnel.DataSource = bdgPersonnel;
             dgvPersonnel.Columns["Idpersonnel"].Visible = false;
             dgvPersonnel.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+        }
+
+        /// <summary>
+        /// Permet de remplir la liste des services dans le combo box pour pouvoir les sélectionner lors de l'ajout ou la modification d'un personnel
+        /// </summary>
+        private void RemplirListeServices()
+        {
+            List<Service> lesServices = controller.GetLesServices();
+            bdgServices.DataSource = lesServices;
+            cboService.DataSource = bdgServices;
         }
     }
 }

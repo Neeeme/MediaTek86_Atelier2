@@ -11,12 +11,19 @@ namespace MediaTek86.controller
         /// récupère les opérations possibles sur le personnel
         /// </summary>
         private readonly PersonnelAccess personnelAccess;
+
+        /// <summary>
+        /// récupère les opérations possibles sur le service
+        /// </summary>
+        private readonly ServiceAccess serviceAccess;
+
         /// <summary>
         /// Récupère les accès aux données
         /// </summary>
         public FrmMediaTek86Controller()
         {
             personnelAccess = new PersonnelAccess();
+            serviceAccess = new ServiceAccess();
         }
 
         /// <summary>
@@ -26,6 +33,15 @@ namespace MediaTek86.controller
         public List<Personnel> GetLePersonnel()
         {
             return personnelAccess.GetLePersonnel();
+        }
+
+        /// <summary>
+        /// Récupère et retourne l'intégralité des services
+        /// </summary>
+        /// <returns></returns>
+        public List<Service> GetLesServices()
+        {
+            return serviceAccess.GetLesServices();
         }
 
     }

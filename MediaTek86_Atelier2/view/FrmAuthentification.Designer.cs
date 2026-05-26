@@ -67,6 +67,7 @@
             this.btnConnect.TabIndex = 8;
             this.btnConnect.Text = "se connecter";
             this.btnConnect.UseVisualStyleBackColor = true;
+            this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
             // 
             // label3
             // 
@@ -98,6 +99,7 @@
             this.Controls.Add(this.label2);
             this.Name = "FrmAuthentification";
             this.Text = "Authentification";
+            this.Load += new System.EventHandler(this.FrmAuthentification_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

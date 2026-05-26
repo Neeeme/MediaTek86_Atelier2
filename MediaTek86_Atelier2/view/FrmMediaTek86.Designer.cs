@@ -69,6 +69,7 @@
             this.btnEnregPers.TabIndex = 2;
             this.btnEnregPers.Text = "enregistrer";
             this.btnEnregPers.UseVisualStyleBackColor = true;
+            this.btnEnregPers.Click += new System.EventHandler(this.btnEnregPers_Click);
             // 
             // cboService
             // 

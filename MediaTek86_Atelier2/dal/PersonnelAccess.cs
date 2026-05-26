@@ -53,5 +53,33 @@ namespace MediaTek86.dal
             }
             return lePersonnel;
         }
+
+        /// <summary>
+        /// Demande d'ajout d'un personnel
+        /// </summary>
+        /// <param name="personnel">objet personnel à ajouter</param>
+        public void AddPersonnel(Personnel personnel)
+        {
+            if (access.Manager != null)
+            {
+                string req = "insert into personnel(nom, prenom, tel, mail, idservice) ";
+                req += "values (@nom, @prenom, @tel, @mail, @idservice);";
+                Dictionary<string, object> parameters = new Dictionary<string, object>();
+                parameters.Add("@nom", personnel.Nom);
+                parameters.Add("@prenom", personnel.Prenom);
+                parameters.Add("@tel", personnel.Tel);
+                parameters.Add("@mail", personnel.Mail);
+                parameters.Add("@idservice", personnel.Service.Idservice);
+                try
+                {
+                    access.Manager.ReqUpdate(req, parameters);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                    Environment.Exit(0);
+                }
+            }
+        }
     }
 }

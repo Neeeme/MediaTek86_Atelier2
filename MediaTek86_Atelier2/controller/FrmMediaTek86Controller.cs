@@ -44,5 +44,14 @@ namespace MediaTek86.controller
             return serviceAccess.GetLesServices();
         }
 
+        /// <summary>
+        /// Demande d'ajout d'un personnel
+        /// </summary>
+        /// <param name="personnel">objet personnel à ajouter</param>
+        public void AddPersonnel(Personnel personnel)
+        {
+            personnelAccess.AddPersonnel(personnel);
+        }
+
     }
 }

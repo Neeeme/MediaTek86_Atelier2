@@ -63,5 +63,26 @@ namespace MediaTek86.view
             bdgServices.DataSource = lesServices;
             cboService.DataSource = bdgServices;
         }
+        
+        /// <summary>
+        /// Permet d'enregistrer un nouveau personnel
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnEnregPers_Click(object sender, EventArgs e)
+        {
+            if (!txtNom.Text.Equals("") && !txtPrenom.Text.Equals("") && !txtTel.Text.Equals("") && !txtMail.Text.Equals("") && cboService.SelectedIndex != -1)
+            {
+                Service service = (Service)bdgServices.List[bdgServices.Position];
+                Personnel personnel = (Personnel)bdgPersonnel.List[bdgPersonnel.Position];
+                personnel = new Personnel(0, txtNom.Text, txtPrenom.Text, txtTel.Text, txtMail.Text, service);
+                controller.AddPersonnel(personnel);
+                RemplirListePersonnel();
+            }
+            else
+            {
+                MessageBox.Show("Tous les champs doivent être remplis.", "Information");
+            }
+        }
     }
 }

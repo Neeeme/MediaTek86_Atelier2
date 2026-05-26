@@ -60,6 +60,7 @@
             this.btnAnnulPers.TabIndex = 10;
             this.btnAnnulPers.Text = "annuler";
             this.btnAnnulPers.UseVisualStyleBackColor = true;
+            this.btnAnnulPers.Click += new System.EventHandler(this.btnAnnulPers_Click_1);
             // 
             // btnEnregPers
             // 
@@ -178,6 +179,7 @@
             this.btnDemandeModifPers.TabIndex = 1;
             this.btnDemandeModifPers.Text = "modifier";
             this.btnDemandeModifPers.UseVisualStyleBackColor = true;
+            this.btnDemandeModifPers.Click += new System.EventHandler(this.btnDemandeModifPers_Click);
             // 
             // dgvPersonnel
             // 

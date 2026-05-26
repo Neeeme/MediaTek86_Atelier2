@@ -81,5 +81,34 @@ namespace MediaTek86.dal
                 }
             }
         }
+
+        /// <summary>
+        /// Demande de modification d'un personnel
+        /// </summary>
+        /// <param name="personnel">objet personnel à modifier</param>
+        public void UpdatePersonnel(Personnel personnel)
+        {
+            if (access.Manager != null)
+            {
+                string req = "update personnel set nom = @nom, prenom = @prenom, tel = @tel, mail = @mail, idservice = @idservice ";
+                req += "where idpersonnel = @idpersonnel;";
+                Dictionary<string, object> parameters = new Dictionary<string, object>();
+                parameters.Add("@idPersonnel", personnel.Idpersonnel);
+                parameters.Add("@nom", personnel.Nom);
+                parameters.Add("@prenom", personnel.Prenom);
+                parameters.Add("@tel", personnel.Tel);
+                parameters.Add("@mail", personnel.Mail);
+                parameters.Add("@idservice", personnel.Service.Idservice);
+                try
+                {
+                    access.Manager.ReqUpdate(req, parameters);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                    Environment.Exit(0);
+                }
+            }
+        }
     }
 }

@@ -9,6 +9,10 @@ namespace MediaTek86.view
     public partial class FrmMediaTek86 : Form
     {
         /// <summary>
+        /// Boolean pour savoir si on est en train de modifier un personnel
+        /// </summary>
+        private Boolean enCoursDeModifPersonnel = false;
+        /// <summary>
         /// Objet pour pouvoir gérer la liste du personnel
         /// </summary>
         private BindingSource bdgPersonnel = new BindingSource();
@@ -40,6 +44,7 @@ namespace MediaTek86.view
             controller = new FrmMediaTek86Controller();
             RemplirListePersonnel();
             RemplirListeServices();
+            EnCoursModifPersonnel(false);
         }
 
         /// <summary>
@@ -75,13 +80,88 @@ namespace MediaTek86.view
             {
                 Service service = (Service)bdgServices.List[bdgServices.Position];
                 Personnel personnel = (Personnel)bdgPersonnel.List[bdgPersonnel.Position];
-                personnel = new Personnel(0, txtNom.Text, txtPrenom.Text, txtTel.Text, txtMail.Text, service);
-                controller.AddPersonnel(personnel);
-                RemplirListePersonnel();
+                if (MessageBox.Show("Voulez-vous vraiment modifier les informations de " + personnel.Nom + " " + personnel.Prenom + " ?", "Confirmation de modification", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    if (enCoursDeModifPersonnel)
+                    {
+                        personnel.Nom = txtNom.Text;
+                        personnel.Prenom = txtPrenom.Text;
+                        personnel.Tel = txtTel.Text;
+                        personnel.Mail = txtMail.Text;
+                        personnel.Service = service;
+                        controller.UpdatePersonnel(personnel);
+                    }
+                    else
+                    {
+                        personnel = new Personnel(0, txtNom.Text, txtPrenom.Text, txtTel.Text, txtMail.Text, service);
+                        controller.AddPersonnel(personnel);
+                    }
+                    RemplirListePersonnel();
+                }
+                EnCoursModifPersonnel(false);
             }
             else
             {
                 MessageBox.Show("Tous les champs doivent être remplis.", "Information");
+            }
+        }
+
+        /// <summary>
+        /// Permet de remplir les champs de la partie modification avec les informations du personnel sélectionner et de changer le boolean enCoursDeModifPersonnel pour différencier une modification d'une création d'un personnel
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnDemandeModifPers_Click(object sender, EventArgs e)
+        {
+            if (dgvPersonnel.SelectedRows.Count > 0)
+            {
+                Personnel personnel = (Personnel)bdgPersonnel.List[bdgPersonnel.Position];
+                EnCoursModifPersonnel(true);
+                txtNom.Text = personnel.Nom;
+                txtPrenom.Text = personnel.Prenom;
+                txtTel.Text = personnel.Tel;
+                txtMail.Text = personnel.Mail;
+                cboService.SelectedIndex = cboService.FindStringExact(personnel.Service.Nom);
+            }
+            else
+            {
+                MessageBox.Show("Une ligne doit être sélectionnée.", "Information");
+            }
+        }
+
+        /// <summary>
+        /// Affichage de la modification d'un personnel si jamais on le modifie, sinon affichage ajout d'un personnal
+        /// </summary>
+        /// <param name="modif"></param>
+        private void EnCoursModifPersonnel(Boolean modif)
+        {
+            enCoursDeModifPersonnel = modif;
+            grbLePersonnel.Enabled = !modif;
+            if (modif)
+            {
+                grbPersonnel.Text = "modifier un personnel";
+            }
+            else
+            {
+                grbPersonnel.Text = "ajouter un personnel";
+                txtNom.Text = "";
+                txtPrenom.Text = "";
+                txtTel.Text = "";
+                txtMail.Text = "";
+            }
+        }
+
+        /// <summary>
+        /// Permet d'annuler la modification d'un personnel, ou l'ajout d'un personnel
+        /// Vide les zones de saisies du personnel
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnAnnulPers_Click_1(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Souhaitez-vous vraiment annuler votre enregistrement/modification?", "Confirmation", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                EnCoursModifPersonnel(false);
             }
         }
     }

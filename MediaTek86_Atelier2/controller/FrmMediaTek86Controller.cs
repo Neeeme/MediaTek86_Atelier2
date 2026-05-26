@@ -53,5 +53,15 @@ namespace MediaTek86.controller
             personnelAccess.AddPersonnel(personnel);
         }
 
+
+        /// <summary>
+        /// Demande de modification d'un personnel
+        /// </summary>
+        /// <param name="personnel">objet personnel à modifier</param>
+        public void UpdatePersonnel(Personnel personnel)
+        {
+            personnelAccess.UpdatePersonnel(personnel);
+        }
+
     }
 }

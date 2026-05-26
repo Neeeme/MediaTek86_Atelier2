@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MediaTek86_Atelier2
+namespace MediaTek86
 {
     internal static class Program
     {

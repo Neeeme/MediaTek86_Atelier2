@@ -170,6 +170,7 @@
             this.btnDemandeSuppPers.TabIndex = 2;
             this.btnDemandeSuppPers.Text = "supprimer";
             this.btnDemandeSuppPers.UseVisualStyleBackColor = true;
+            this.btnDemandeSuppPers.Click += new System.EventHandler(this.btnDemandeSuppPers_Click);
             // 
             // btnDemandeModifPers
             // 

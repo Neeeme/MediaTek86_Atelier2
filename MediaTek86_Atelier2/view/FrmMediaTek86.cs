@@ -164,5 +164,27 @@ namespace MediaTek86.view
                 EnCoursModifPersonnel(false);
             }
         }
+
+        /// <summary>
+        /// Permet de supprimer un personnel de la base de données après confirmation de l'utilisateur
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnDemandeSuppPers_Click(object sender, EventArgs e)
+        {
+            if (dgvPersonnel.SelectedRows.Count > 0)
+            {
+                Personnel personnel = (Personnel)bdgPersonnel.List[bdgPersonnel.Position];
+                if (MessageBox.Show("Voulez-vous vraiment supprimer " + personnel.Nom + " " + personnel.Prenom + " ?", "Confirmation de suppression", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    controller.DelPersonnel(personnel);
+                    RemplirListePersonnel();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Veuillez sélectionner une ligne.", "Information");
+            }
+        }
     }
 }

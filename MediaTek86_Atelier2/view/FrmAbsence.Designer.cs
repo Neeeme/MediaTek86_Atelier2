@@ -161,6 +161,7 @@
             this.btnDemandeModifAbs.TabIndex = 5;
             this.btnDemandeModifAbs.Text = "modifier";
             this.btnDemandeModifAbs.UseVisualStyleBackColor = true;
+            this.btnDemandeModifAbs.Click += new System.EventHandler(this.btnDemandeModifAbs_Click);
             // 
             // btnDemandeSuppAbs
             // 

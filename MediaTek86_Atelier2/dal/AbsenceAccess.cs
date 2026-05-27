@@ -89,5 +89,31 @@ namespace MediaTek86.dal
                 }
             }
         }
+
+        /// <summary>
+        /// Demande de modification d'une absence sur un personnel
+        /// </summary>
+        /// <param name="personnel">objet absence à modifier</param>
+        public void UpdateAbsence(Absence absence)
+        {
+            if (access.Manager != null)
+            {
+                string req = "update absence set datedebut = @datedebut, datefin = @datefin, idmotif = @idmotif ";
+                req += "where idpersonnel = @idpersonnel;";
+                Dictionary<string, object> parameters = new Dictionary<string, object>();
+                parameters.Add("@idPersonnel", absence.idpersonnel.Idpersonnel);
+                parameters.Add("@datedebut", absence.date_de_debut);
+                parameters.Add("@datefin", absence.date_de_fin);
+                parameters.Add("@idmotif", absence.motif.Idmotif);
+                try
+                {
+                    access.Manager.ReqUpdate(req, parameters);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
+            }
+        }
     }
 }

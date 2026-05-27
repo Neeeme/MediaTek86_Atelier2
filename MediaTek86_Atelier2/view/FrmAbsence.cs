@@ -8,7 +8,10 @@ namespace MediaTek86.view
 {
     public partial class FrmAbsence : Form
     {
-
+        /// <summary>
+        /// Permet de vérifier si une absence est en cours de modification
+        /// </summary>
+        private Boolean enCoursDeModifAbsence = false;
         /// <summary>
         /// Variable pour pouvoir stocker le personnel sélectionner
         /// </summary>
@@ -83,6 +86,11 @@ namespace MediaTek86.view
             prnLabel.Text = personnelRecu.Prenom;
         }
 
+        /// <summary>
+        /// Permet d'enregistrer une absence dans la base de données ou de modifier une absence déjà enregistrée en fonction du boolean enCoursDeModifAbsence
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnEnregAbs_Click(object sender, EventArgs e)
         {
             if (!dtpDebutAbs.Value.Equals("") && !dtpFinAbs.Text.Equals("") && cboMotif.SelectedIndex != -1)
@@ -92,9 +100,25 @@ namespace MediaTek86.view
                     if (controller.CreneauLibre(personnelRecu.Idpersonnel, dtpDebutAbs.Value, dtpFinAbs.Value))
                     {
                         Motif motif = (Motif)bdgMotifs.List[bdgMotifs.Position];
-                        Absence absence = new Absence(personnelRecu, dtpDebutAbs.Value, dtpFinAbs.Value, motif);
-                        controller.AddAbsence(absence);
+                        if (enCoursDeModifAbsence)
+                        {
+                            Absence absence = (Absence)bdgAbsence.List[bdgAbsence.Position];
+                            if (MessageBox.Show("Voulez-vous vraiment modifier l'absence du " + absence.date_de_debut + " jusqu'au " + absence.date_de_fin + " de " + personnelRecu.Nom + " " + personnelRecu.Prenom + "?", "Confirmation de modification", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                            {
+                                absence.idpersonnel = personnelRecu;
+                                absence.date_de_debut = dtpDebutAbs.Value;
+                                absence.date_de_fin = dtpFinAbs.Value;
+                                absence.motif = motif;
+                                controller.UpdateAbsence(absence);
+                            }
+                        }
+                        else
+                        {
+                            Absence absence = new Absence(personnelRecu, dtpDebutAbs.Value, dtpFinAbs.Value, motif);
+                            controller.AddAbsence(absence);
+                        }
                         RemplirListeAbsence();
+                        EnCoursModifAbsence(false);
                     }
                     else
                     {
@@ -109,6 +133,42 @@ namespace MediaTek86.view
             else
             {
                 MessageBox.Show("Tous les champs doivent être remplis.", "Information");
+            }
+        }
+
+        /// <summary>
+        /// Permet de changer le boolean enCoursDeModifAbsence pour pouvoir différencier une modification d'une création d'une absence et de changer le titre du group box en fonction de l'action en cours
+        /// </summary>
+        /// <param name="modif"></param>
+        private void EnCoursModifAbsence(Boolean modif)
+        {
+            enCoursDeModifAbsence = modif;
+            if (modif)
+            {
+                grbAbsence.Text = "modifier une absence";
+            }
+            else
+            {
+                grbAbsence.Text = "ajouter une absence";
+                dtpDebutAbs.Value = DateTime.Now;
+                dtpFinAbs.Value = DateTime.Now;
+                cboMotif.SelectedIndex = 0;
+            }
+        }
+
+        private void btnDemandeModifAbs_Click(object sender, EventArgs e)
+        {
+            if (dgvAbsences.SelectedRows.Count > 0)
+            {
+                Absence absence = (Absence)bdgAbsence.List[bdgAbsence.Position];
+                EnCoursModifAbsence(true);
+                dtpDebutAbs.Value = absence.date_de_debut;
+                dtpFinAbs.Value = absence.date_de_fin;
+                cboMotif.SelectedIndex = cboMotif.FindStringExact(absence.motif.Libelle);
+            }
+            else
+            {
+                MessageBox.Show("Une ligne doit être sélectionnée.", "Information");
             }
         }
     }

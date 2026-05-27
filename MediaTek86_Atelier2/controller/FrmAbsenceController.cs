@@ -84,5 +84,14 @@ namespace MediaTek86.controller
             }
             return true;
         }
+
+        /// <summary>
+        /// Demande de modification d'une absence
+        /// </summary>
+        /// <param name="personnel">objet absence à modifier</param>
+        public void UpdateAbsence(Absence absence)
+        {
+            absenceAccess.UpdateAbsence(absence);
+        }
     }
 }

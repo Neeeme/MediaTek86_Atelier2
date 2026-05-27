@@ -80,16 +80,17 @@ namespace MediaTek86.view
             {
                 Service service = (Service)bdgServices.List[bdgServices.Position];
                 Personnel personnel = (Personnel)bdgPersonnel.List[bdgPersonnel.Position];
-                if (MessageBox.Show("Voulez-vous vraiment modifier les informations de " + personnel.Nom + " " + personnel.Prenom + " ?", "Confirmation de modification", MessageBoxButtons.YesNo) == DialogResult.Yes)
-                {
                     if (enCoursDeModifPersonnel)
                     {
-                        personnel.Nom = txtNom.Text;
-                        personnel.Prenom = txtPrenom.Text;
-                        personnel.Tel = txtTel.Text;
-                        personnel.Mail = txtMail.Text;
-                        personnel.Service = service;
-                        controller.UpdatePersonnel(personnel);
+                        if (MessageBox.Show("Voulez-vous vraiment modifier les informations de " + personnel.Nom + " " + personnel.Prenom + " ?", "Confirmation de modification", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                            {
+                                personnel.Nom = txtNom.Text;
+                                personnel.Prenom = txtPrenom.Text;
+                                personnel.Tel = txtTel.Text;
+                                personnel.Mail = txtMail.Text;
+                                personnel.Service = service;
+                                controller.UpdatePersonnel(personnel);
+                            }
                     }
                     else
                     {
@@ -97,8 +98,7 @@ namespace MediaTek86.view
                         controller.AddPersonnel(personnel);
                     }
                     RemplirListePersonnel();
-                }
-                EnCoursModifPersonnel(false);
+                    EnCoursModifPersonnel(false);
             }
             else
             {

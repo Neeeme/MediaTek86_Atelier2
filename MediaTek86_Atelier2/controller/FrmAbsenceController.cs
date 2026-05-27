@@ -54,5 +54,35 @@ namespace MediaTek86.controller
         {
             return motifAccess.GetLesMotifs();
         }
+
+        /// <summary>
+        /// Demande d'ajout d'une absence
+        /// </summary>
+        /// <param name="absence">objet absence à ajouter</param>
+        public void AddAbsence(Absence absence)
+        {
+            absenceAccess.AddAbsence(absence);
+        }
+
+        /// <summary>
+        /// Permet de vérifier si un créneau d'absence est libre pour un personnel donné
+        /// </summary>
+        /// <param name="idPersonnel"></param>
+        /// <param name="datedebut"></param>
+        /// <param name="datefin"></param>
+        /// <returns></returns>
+        public bool CreneauLibre(int idPersonnel, DateTime datedebut, DateTime datefin)
+        {
+            List<Absence> absences = GetAbsence();
+
+            foreach (Absence abs in absences)
+            {
+                if (datedebut <= abs.date_de_fin && datefin >= abs.date_de_debut)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
     }
 }

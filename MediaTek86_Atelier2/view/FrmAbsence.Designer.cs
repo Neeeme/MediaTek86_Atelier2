@@ -67,6 +67,7 @@
             this.btnEnregAbs.TabIndex = 6;
             this.btnEnregAbs.Text = "enregistrer";
             this.btnEnregAbs.UseVisualStyleBackColor = true;
+            this.btnEnregAbs.Click += new System.EventHandler(this.btnEnregAbs_Click);
             // 
             // cboMotif
             // 

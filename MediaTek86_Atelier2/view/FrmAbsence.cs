@@ -83,6 +83,33 @@ namespace MediaTek86.view
             prnLabel.Text = personnelRecu.Prenom;
         }
 
-
+        private void btnEnregAbs_Click(object sender, EventArgs e)
+        {
+            if (!dtpDebutAbs.Value.Equals("") && !dtpFinAbs.Text.Equals("") && cboMotif.SelectedIndex != -1)
+            {
+                if (dtpFinAbs.Value > dtpDebutAbs.Value)
+                {
+                    if (controller.CreneauLibre(personnelRecu.Idpersonnel, dtpDebutAbs.Value, dtpFinAbs.Value))
+                    {
+                        Motif motif = (Motif)bdgMotifs.List[bdgMotifs.Position];
+                        Absence absence = new Absence(personnelRecu, dtpDebutAbs.Value, dtpFinAbs.Value, motif);
+                        controller.AddAbsence(absence);
+                        RemplirListeAbsence();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Il existe déjà une absence pour ce créneau.", "Information");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("La date de fin doit être antérieure à la date de début.", "Information");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Tous les champs doivent être remplis.", "Information");
+            }
+        }
     }
 }

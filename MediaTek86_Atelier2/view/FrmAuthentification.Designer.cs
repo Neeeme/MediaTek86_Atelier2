@@ -48,7 +48,6 @@
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(100, 20);
             this.txtLogin.TabIndex = 10;
-            this.txtLogin.Text = "antoine";
             // 
             // txtPwd
             // 
@@ -57,7 +56,6 @@
             this.txtPwd.PasswordChar = '*';
             this.txtPwd.Size = new System.Drawing.Size(100, 20);
             this.txtPwd.TabIndex = 9;
-            this.txtPwd.Text = "******";
             // 
             // btnConnect
             // 

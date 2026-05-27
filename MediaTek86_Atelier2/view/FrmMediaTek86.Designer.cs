@@ -185,11 +185,20 @@
             // 
             // dgvPersonnel
             // 
+            this.dgvPersonnel.AllowUserToAddRows = false;
+            this.dgvPersonnel.AllowUserToDeleteRows = false;
+            this.dgvPersonnel.AllowUserToResizeRows = false;
             this.dgvPersonnel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPersonnel.Location = new System.Drawing.Point(23, 20);
+            this.dgvPersonnel.MultiSelect = false;
             this.dgvPersonnel.Name = "dgvPersonnel";
+            this.dgvPersonnel.ReadOnly = true;
+            this.dgvPersonnel.RowHeadersVisible = false;
+            this.dgvPersonnel.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.dgvPersonnel.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPersonnel.Size = new System.Drawing.Size(567, 150);
             this.dgvPersonnel.TabIndex = 0;
+            this.dgvPersonnel.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPersonnel_CellContentClick);
             // 
             // grbLePersonnel
             // 
@@ -233,7 +242,7 @@
             this.Controls.Add(this.grbLePersonnel);
             this.Controls.Add(this.grbPersonnel);
             this.Name = "FrmMediaTek86";
-            this.Text = "FrmMediaTek86";
+            this.Text = "Personnel";
             this.Load += new System.EventHandler(this.FrmMediaTek86_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersonnel)).EndInit();
             this.grbLePersonnel.ResumeLayout(false);

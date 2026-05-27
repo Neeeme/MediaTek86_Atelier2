@@ -79,9 +79,9 @@ namespace MediaTek86.view
             if (!txtNom.Text.Equals("") && !txtPrenom.Text.Equals("") && !txtTel.Text.Equals("") && !txtMail.Text.Equals("") && cboService.SelectedIndex != -1)
             {
                 Service service = (Service)bdgServices.List[bdgServices.Position];
-                Personnel personnel = (Personnel)bdgPersonnel.List[bdgPersonnel.Position];
                     if (enCoursDeModifPersonnel)
                     {
+                        Personnel personnel = (Personnel)bdgPersonnel.List[bdgPersonnel.Position];
                         if (MessageBox.Show("Voulez-vous vraiment modifier les informations de " + personnel.Nom + " " + personnel.Prenom + " ?", "Confirmation de modification", MessageBoxButtons.YesNo) == DialogResult.Yes)
                             {
                                 personnel.Nom = txtNom.Text;
@@ -94,7 +94,7 @@ namespace MediaTek86.view
                     }
                     else
                     {
-                        personnel = new Personnel(0, txtNom.Text, txtPrenom.Text, txtTel.Text, txtMail.Text, service);
+                        Personnel personnel = new Personnel(0, txtNom.Text, txtPrenom.Text, txtTel.Text, txtMail.Text, service);
                         controller.AddPersonnel(personnel);
                     }
                     RemplirListePersonnel();
@@ -200,6 +200,11 @@ namespace MediaTek86.view
             {
                 MessageBox.Show("Veuillez sélectionner une ligne.", "Information");
             }
+        }
+
+        private void dgvPersonnel_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

@@ -18,6 +18,10 @@ namespace MediaTek86.view
         /// </summary>
         private BindingSource bdgAbsence = new BindingSource();
         /// <summary>
+        /// Objet pour pouvoir gérer la liste des motifs
+        /// </summary>
+        private BindingSource bdgMotifs = new BindingSource();
+        /// <summary>
         /// Contrôleur de la fenêtre d'absence
         /// </summary>
         private FrmAbsenceController controller;
@@ -41,6 +45,7 @@ namespace MediaTek86.view
         {
             controller = new FrmAbsenceController();
             RemplirListeAbsence();
+            RemplirListeMotif();
 
         }
 
@@ -55,6 +60,17 @@ namespace MediaTek86.view
             dgvAbsences.DataSource = bdgAbsence;
             dgvAbsences.Columns["Idpersonnel"].Visible = false;
             dgvAbsences.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+        }
+
+
+        /// <summary>
+        /// Permet de remplir la liste motifs absences dans le combo box pour pouvoir les sélectionner lors de l'ajout ou la modification d'un personnel
+        /// </summary>
+        private void RemplirListeMotif()
+        {
+            List<Motif> lesMotifs = controller.GetLesMotifs();
+            bdgMotifs.DataSource = lesMotifs;
+            cboMotif.DataSource = bdgMotifs;
         }
     }
 }

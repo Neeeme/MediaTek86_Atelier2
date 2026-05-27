@@ -171,6 +171,7 @@
             this.btnDemandeSuppAbs.TabIndex = 4;
             this.btnDemandeSuppAbs.Text = "supprimer";
             this.btnDemandeSuppAbs.UseVisualStyleBackColor = true;
+            this.btnDemandeSuppAbs.Click += new System.EventHandler(this.btnDemandeSuppAbs_Click);
             // 
             // label2
             // 

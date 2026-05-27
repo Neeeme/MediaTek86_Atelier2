@@ -171,5 +171,26 @@ namespace MediaTek86.view
                 MessageBox.Show("Une ligne doit être sélectionnée.", "Information");
             }
         }
+
+        private void btnDemandeSuppAbs_Click(object sender, EventArgs e)
+        {
+            if (dgvAbsences.SelectedRows.Count > 0)
+            {
+                Absence absence = (Absence)bdgAbsence.List[bdgAbsence.Position];
+                if (MessageBox.Show("Voulez-vous vraiment supprimer l'absence du " + absence.date_de_debut + " jusqu'au " + absence.date_de_fin + " de " + personnelRecu.Nom + " " + personnelRecu.Prenom + "?", "Confirmation de suppression", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    absence.idpersonnel = personnelRecu;
+                    absence.date_de_debut = absence.date_de_debut;
+                    absence.date_de_fin = absence.date_de_fin;
+                    absence.motif = absence.motif;
+                    controller.DelAbsence(absence);
+                    RemplirListeAbsence();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Veuillez sélectionner une ligne.", "Information");
+            }
+        }
     }
 }

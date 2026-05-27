@@ -46,6 +46,7 @@ namespace MediaTek86.view
             controller = new FrmAbsenceController();
             RemplirListeAbsence();
             RemplirListeMotif();
+            RemplirNomPrenom();
 
         }
 
@@ -72,5 +73,16 @@ namespace MediaTek86.view
             bdgMotifs.DataSource = lesMotifs;
             cboMotif.DataSource = bdgMotifs;
         }
+
+        /// <summary>
+        /// Permet de remplir la liste des prénoms et noms du personnel sélectionner pour pouvoir les afficher dans la fenêtre d'absence
+        /// </summary>
+        private void RemplirNomPrenom()
+        {
+            nomLabel.Text = personnelRecu.Nom;
+            prnLabel.Text = personnelRecu.Prenom;
+        }
+
+
     }
 }

@@ -58,6 +58,7 @@
             this.btnAnnulAbs.TabIndex = 7;
             this.btnAnnulAbs.Text = "annuler";
             this.btnAnnulAbs.UseVisualStyleBackColor = true;
+            this.btnAnnulAbs.Click += new System.EventHandler(this.btnAnnulAbs_Click);
             // 
             // btnEnregAbs
             // 

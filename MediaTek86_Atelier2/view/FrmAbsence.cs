@@ -192,5 +192,13 @@ namespace MediaTek86.view
                 MessageBox.Show("Veuillez sélectionner une ligne.", "Information");
             }
         }
+
+        private void btnAnnulAbs_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Souhaitez-vous vraiment annuler votre enregistrement/modification?", "Confirmation", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                EnCoursModifAbsence(false);
+            }
+        }
     }
 }

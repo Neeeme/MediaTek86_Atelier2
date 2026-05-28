@@ -167,6 +167,7 @@ namespace MediaTek86.view
 
         /// <summary>
         /// Permet de supprimer un personnel de la base de données après confirmation de l'utilisateur
+        /// Permet de supprimer l'intégralité des absences d'un personnel en même temps
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -177,6 +178,7 @@ namespace MediaTek86.view
                 Personnel personnel = (Personnel)bdgPersonnel.List[bdgPersonnel.Position];
                 if (MessageBox.Show("Voulez-vous vraiment supprimer " + personnel.Nom + " " + personnel.Prenom + " ?", "Confirmation de suppression", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
+                    controller.DelLesAbsences(personnel);
                     controller.DelPersonnel(personnel);
                     RemplirListePersonnel();
                 }

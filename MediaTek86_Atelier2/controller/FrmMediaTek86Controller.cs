@@ -16,6 +16,11 @@ namespace MediaTek86.controller
         /// récupère les opérations possibles sur le service
         /// </summary>
         private readonly ServiceAccess serviceAccess;
+        /// <summary>
+        /// récupère les opérations possibles sur le service
+        /// </summary>
+        private readonly AbsenceAccess absenceAccess;
+
 
         /// <summary>
         /// Récupère les accès aux données
@@ -24,6 +29,7 @@ namespace MediaTek86.controller
         {
             personnelAccess = new PersonnelAccess();
             serviceAccess = new ServiceAccess();
+            absenceAccess = new AbsenceAccess();
         }
 
         /// <summary>
@@ -70,6 +76,15 @@ namespace MediaTek86.controller
         public void DelPersonnel(Personnel personnel)
         {
             personnelAccess.DelPersonnel(personnel);
+        }
+
+        /// <summary>
+        /// Suppression de l'intégralité des absences d'un personnel lorsque celui ci est supprimé
+        /// </summary>
+        /// <param name="personnel">objet absence sur personnel à supprimer</param>
+        public void DelLesAbsences(Personnel personnel)
+        {
+            absenceAccess.DelLesAbsences(personnel);
         }
     }
 }

@@ -88,7 +88,7 @@ namespace MediaTek86.controller
         /// <summary>
         /// Demande de modification d'une absence
         /// </summary>
-        /// <param name="personnel">objet absence à modifier</param>
+        /// <param name="absence">objet absence à modifier</param>
         public void UpdateAbsence(Absence absence)
         {
             absenceAccess.UpdateAbsence(absence);
@@ -97,7 +97,7 @@ namespace MediaTek86.controller
         /// <summary>
         /// Demande de suppression d'une absence
         /// </summary>
-        /// <param name="personnel">objet absence à supprimer</param>
+        /// <param name="absence">objet absence à supprimer</param>
         public void DelAbsence(Absence absence)
         {
             absenceAccess.DelAbsence(absence);

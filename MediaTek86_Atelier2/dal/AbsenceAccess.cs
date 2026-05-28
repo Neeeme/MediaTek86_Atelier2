@@ -132,7 +132,28 @@ namespace MediaTek86.dal
                 parameters.Add("@idmotif", absence.motif.Idmotif);
                 try
                 {
-                    Console.WriteLine("idpersonnel : " + absence.idpersonnel.Idpersonnel);
+                    access.Manager.ReqUpdate(req, parameters);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Suppression de l'intégralité des absences d'un personnel lorsque celui ci est supprimé
+        /// </summary>
+        /// <param name="personnel">objet absence sur personnel à supprimer</param>
+        public void DelLesAbsences(Personnel personnel)
+        {
+            if (access.Manager != null)
+            {
+                string req = "delete from absence where idpersonnel = @idpersonnel";
+                Dictionary<string, object> parameters = new Dictionary<string, object>();
+                parameters.Add("@idpersonnel", personnel.Idpersonnel);
+                try
+                {
                     access.Manager.ReqUpdate(req, parameters);
                 }
                 catch (Exception e)

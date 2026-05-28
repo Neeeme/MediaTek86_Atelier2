@@ -14,7 +14,7 @@ Elle sera écrit en C# et utilisera MySQL en SGBD pour la base de données.<br /
 
 ### **But de l'application**
 
-Le responsable souhaite avoir un **un petit utilitaire pour gérer le personnel. leur service attribué** IL souhaite aussi pouvoir **gérer les absences d'un personnel selectionné en amont**.
+Le responsable souhaite avoir un **un petit utilitaire pour gérer le personnel. leur service attribué**. Il souhaite aussi pouvoir **gérer les absences d'un personnel selectionné en amont**.
 L'application MediaTek86 représente cet utilitaire.
 L'application doit permettre de :
   - Présenter la liste du personnel (nom, prénom, tel, mail, service) sachant qu'il existe une liste déterminée de service (administratif, médiation culturelle et prêt).

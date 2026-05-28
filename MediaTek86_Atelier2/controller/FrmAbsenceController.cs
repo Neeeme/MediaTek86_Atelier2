@@ -69,13 +69,19 @@ namespace MediaTek86.controller
         /// </summary>
         /// <param name="datedebut"></param>
         /// <param name="datefin"></param>
+        /// <param name="datedebutavantmodif"></param>
         /// <returns></returns>
-        public bool CreneauLibre(DateTime datedebut, DateTime datefin)
+        public bool CreneauLibre(DateTime datedebut, DateTime datefin, DateTime? datedebutavantmodif)
         {
             List<Absence> absences = GetAbsence();
 
             foreach (Absence abs in absences)
             {
+                if (datedebutavantmodif.HasValue && abs.date_de_debut == datedebutavantmodif.Value)
+                {
+                    continue;
+                }
+
                 if (datedebut <= abs.date_de_fin && datefin >= abs.date_de_debut)
                 {
                     return false;
@@ -88,9 +94,9 @@ namespace MediaTek86.controller
         /// Demande de modification d'une absence
         /// </summary>
         /// <param name="absence">objet absence à modifier</param>
-        public void UpdateAbsence(Absence absence)
+        public void UpdateAbsence(Absence absence, DateTime date)
         {
-            absenceAccess.UpdateAbsence(absence);
+            absenceAccess.UpdateAbsence(absence, date);
         }
 
         /// <summary>

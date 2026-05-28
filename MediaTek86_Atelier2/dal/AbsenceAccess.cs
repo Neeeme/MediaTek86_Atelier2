@@ -93,18 +93,22 @@ namespace MediaTek86.dal
         /// <summary>
         /// Demande de modification d'une absence sur un personnel
         /// </summary>
-        /// <param name="personnel">objet absence à modifier</param>
-        public void UpdateAbsence(Absence absence)
+        /// <param name="absence">objet absence à modifier</param>
+        public void UpdateAbsence(Absence absence, DateTime ancienneDate)
         {
             if (access.Manager != null)
             {
                 string req = "update absence set datedebut = @datedebut, datefin = @datefin, idmotif = @idmotif ";
-                req += "where idpersonnel = @idpersonnel;";
+                req += "where idpersonnel = @idpersonnel and datedebut = @datedebutavant;";
+
                 Dictionary<string, object> parameters = new Dictionary<string, object>();
-                parameters.Add("@idPersonnel", absence.idpersonnel.Idpersonnel);
-                parameters.Add("@datedebut", absence.date_de_debut);
+                parameters.Add("@idpersonnel", absence.idpersonnel.Idpersonnel);
+                parameters.Add("@datedebut", absence.date_de_debut); 
                 parameters.Add("@datefin", absence.date_de_fin);
                 parameters.Add("@idmotif", absence.motif.Idmotif);
+
+                parameters.Add("@datedebutavant", ancienneDate);
+
                 try
                 {
                     access.Manager.ReqUpdate(req, parameters);

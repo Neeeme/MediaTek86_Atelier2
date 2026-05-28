@@ -97,19 +97,29 @@ namespace MediaTek86.view
             {
                 if (dtpFinAbs.Value > dtpDebutAbs.Value)
                 {
-                    if (controller.CreneauLibre(dtpDebutAbs.Value, dtpFinAbs.Value))
+                    DateTime ancienneDate = DateTime.Now;
+
+                    if (enCoursDeModifAbsence)
+                    {
+                        Absence absenceEnCours = (Absence)bdgAbsence.List[bdgAbsence.Position];
+                        ancienneDate = absenceEnCours.date_de_debut;
+                    }
+                    if (controller.CreneauLibre(dtpDebutAbs.Value, dtpFinAbs.Value, ancienneDate))
                     {
                         Motif motif = (Motif)bdgMotifs.List[bdgMotifs.Position];
+
                         if (enCoursDeModifAbsence)
                         {
                             Absence absence = (Absence)bdgAbsence.List[bdgAbsence.Position];
-                            if (MessageBox.Show("Voulez-vous vraiment modifier l'absence du " + absence.date_de_debut + " jusqu'au " + absence.date_de_fin + " de " + personnelRecu.Nom + " " + personnelRecu.Prenom + "?", "Confirmation de modification", MessageBoxButtons.YesNo) == DialogResult.Yes)
+
+                            if (MessageBox.Show("Voulez-vous vraiment modifier l'absence du " + ancienneDate + " jusqu'au " + absence.date_de_fin + " de " + personnelRecu.Nom + " " + personnelRecu.Prenom + "?", "Confirmation de modification", MessageBoxButtons.YesNo) == DialogResult.Yes)
                             {
                                 absence.idpersonnel = personnelRecu;
                                 absence.date_de_debut = dtpDebutAbs.Value;
                                 absence.date_de_fin = dtpFinAbs.Value;
                                 absence.motif = motif;
-                                controller.UpdateAbsence(absence);
+
+                                controller.UpdateAbsence(absence, ancienneDate);
                             }
                         }
                         else
@@ -117,6 +127,7 @@ namespace MediaTek86.view
                             Absence absence = new Absence(personnelRecu, dtpDebutAbs.Value, dtpFinAbs.Value, motif);
                             controller.AddAbsence(absence);
                         }
+
                         RemplirListeAbsence();
                         EnCoursModifAbsence(false);
                     }

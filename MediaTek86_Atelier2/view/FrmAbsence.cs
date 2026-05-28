@@ -97,7 +97,7 @@ namespace MediaTek86.view
             {
                 if (dtpFinAbs.Value > dtpDebutAbs.Value)
                 {
-                    if (controller.CreneauLibre(personnelRecu.Idpersonnel, dtpDebutAbs.Value, dtpFinAbs.Value))
+                    if (controller.CreneauLibre(dtpDebutAbs.Value, dtpFinAbs.Value))
                     {
                         Motif motif = (Motif)bdgMotifs.List[bdgMotifs.Position];
                         if (enCoursDeModifAbsence)

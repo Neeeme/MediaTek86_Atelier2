@@ -67,11 +67,10 @@ namespace MediaTek86.controller
         /// <summary>
         /// Permet de vérifier si un créneau d'absence est libre pour un personnel donné
         /// </summary>
-        /// <param name="idPersonnel"></param>
         /// <param name="datedebut"></param>
         /// <param name="datefin"></param>
         /// <returns></returns>
-        public bool CreneauLibre(int idPersonnel, DateTime datedebut, DateTime datefin)
+        public bool CreneauLibre(DateTime datedebut, DateTime datefin)
         {
             List<Absence> absences = GetAbsence();
 

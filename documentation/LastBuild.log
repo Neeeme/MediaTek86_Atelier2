@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shfbBuild product="Sandcastle Help File Builder and Tools" version="2025.9.30.0" projectFile="C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Documentation Technique.shfbproj" started="27/05/2026 18:27:53">
+<shfbBuild product="Sandcastle Help File Builder and Tools" version="2025.9.30.0" projectFile="C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\documentation.shfbproj" started="28/05/2026 09:56:30">
 <buildStep step="Initializing">
 The Sandcastle tools are located in &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder&#39;
 Locating components in the following folder(s):
-    C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3
+    C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4
     C:\ProgramData\EWSoftware\Sandcastle Help File Builder\Components and Plug-Ins
     C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components
 Using framework reflection data for &#39;.NET Framework 4.8&#39; located in &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Data\.NETFramework&#39;
@@ -17,17 +17,17 @@ Portions Copyright &#169; 2014, Sam Harwell, All Rights Reserved
 </buildStep>
 <buildStep step="ValidatingDocumentationSources">
 Validating and copying documentation source information
-Source: C:\Projet\B1.2\Applications\MediaTek86_Atelier2\MediaTek86_Atelier2\bin\Debug\MediaTek86.exe
-    Found assembly &#39;C:\Projet\B1.2\Applications\MediaTek86_Atelier2\MediaTek86_Atelier2\bin\Debug\MediaTek86.exe&#39;
-Source: C:\Projet\B1.2\Applications\MediaTek86_Atelier2\MediaTek86_Atelier2\bin\Debug\MediaTek86.xml
+Source: C:\Projet\B1.2\Applications\MediaTek86_Atelier2\MediaTek86_Atelier2\bin\Release\MediaTek86.exe
+    Found assembly &#39;C:\Projet\B1.2\Applications\MediaTek86_Atelier2\MediaTek86_Atelier2\bin\Release\MediaTek86.exe&#39;
+Source: C:\Projet\B1.2\Applications\MediaTek86_Atelier2\MediaTek86_Atelier2\bin\Release\MediaTek86.xml
 
 Copying XML comments files
-    C:\Projet\B1.2\Applications\MediaTek86_Atelier2\MediaTek86_Atelier2\bin\Debug\MediaTek86.xml -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Help\Working\MediaTek86.xml
+    C:\Projet\B1.2\Applications\MediaTek86_Atelier2\MediaTek86_Atelier2\bin\Release\MediaTek86.xml -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\Help\Working\MediaTek86.xml
 </buildStep>
 <buildStep step="GenerateSharedContent">
-Generating shared content files (en-US, Anglais (&#201;tats-Unis))...
+Generating shared content files (fr-FR, Fran&#231;ais (France))...
 <plugIn name="Lightweight Website Style" behavior="After" priority="1000">
-</plugIn>    Last step completed in 00:00:00,0020
+</plugIn>    Last step completed in 00:00:00,0280
 </buildStep>
 <buildStep step="GenerateApiFilter">
 Generating API filter for MRefBuilder...
@@ -35,10 +35,10 @@ Generating API filter for MRefBuilder...
 </buildStep>
 <buildStep step="GenerateReflectionInfo">
 Generating reflection information...
-[C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\MSBuild\Current\Bin\amd64\MSBuild.exe - GenerateRefInfo-8063d564-5e63-4696-ad90-85f9ac759c38.proj]
-La g&#195;&#169;n&#195;&#169;ration a d&#195;&#169;marr&#195;&#169; 27/05/2026 18:27:54.
+[C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\MSBuild\Current\Bin\amd64\MSBuild.exe - GenerateRefInfo-0d099edb-7ed7-4816-82ac-bda47720d408.proj]
+La g&#195;&#169;n&#195;&#169;ration a d&#195;&#169;marr&#195;&#169; 28/05/2026 09:56:31.
 
-Projet &quot;C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Help\Working\GenerateRefInfo-8063d564-5e63-4696-ad90-85f9ac759c38.proj&quot; sur le n&#197;“ud 1 (cibles par d&#195;&#169;faut).
+Projet &quot;C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\Help\Working\GenerateRefInfo-0d099edb-7ed7-4816-82ac-bda47720d408.proj&quot; sur le n&#197;“ud 1 (cibles par d&#195;&#169;faut).
 PrepareForBuild:
   Cr&#195;&#169;ation du r&#195;&#169;pertoire &quot;obj\Debug\&quot;.
 GenerateRefInfo:
@@ -51,32 +51,32 @@ GenerateRefInfo:
   Using framework redirect &#39;System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&#39; in place of &#39;System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&#39;
   Using framework redirect &#39;System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&#39; in place of &#39;System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&#39;
   Using framework redirect &#39;Accessibility, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&#39; in place of &#39;Accessibility, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&#39;
-  Wrote information on 6 namespaces, 19 types, and 166 members
+  Wrote information on 6 namespaces, 19 types, and 169 members
   Merging duplicate type and member information
   Merged 0 duplicate type(s) and 0 duplicate member(s)
-G&#195;&#169;n&#195;&#169;ration du projet &quot;C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Help\Working\GenerateRefInfo-8063d564-5e63-4696-ad90-85f9ac759c38.proj&quot; termin&#195;&#169;e (cibles par d&#195;&#169;faut).
-    Last step completed in 00:00:00,5902
+G&#195;&#169;n&#195;&#169;ration du projet &quot;C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\Help\Working\GenerateRefInfo-0d099edb-7ed7-4816-82ac-bda47720d408.proj&quot; termin&#195;&#169;e (cibles par d&#195;&#169;faut).
+    Last step completed in 00:00:00,9680
 </buildStep>
 <buildStep step="ApplyDocumentModel">
 Applying document model to reflection output...
-    Last step completed in 00:00:00,1360
+    Last step completed in 00:00:00,1490
 </buildStep>
 <buildStep step="AddApiTopicFilenames">
 Adding topic filenames to API members...
-    Last step completed in 00:00:00,2460
+    Last step completed in 00:00:00,1580
 </buildStep>
 <buildStep step="GenerateApiTopicManifest">
 Generating API topic manifest...
-    Last step completed in 00:00:00,2308
+    Last step completed in 00:00:00,1580
 </buildStep>
 <buildStep step="GenerateNamespaceSummaries">
 Generating namespace summary information...
-    Last step completed in 00:00:00,0240
+    Last step completed in 00:00:00,0550
 </buildStep>
 <buildStep step="CopyAdditionalContent">
 Copying additional content files...
 No additional content to copy
-    Last step completed in 00:00:00,0000
+    Last step completed in 00:00:00,0010
 </buildStep>
 <buildStep step="MergeTablesOfContents">
 Merging conceptual and additional tables of contents...
@@ -89,105 +89,105 @@ Generating conceptual content intermediate TOC file...
 </buildStep>
 <buildStep step="CreateBuildAssemblerConfigs">
 Creating Sandcastle configuration files...
-    Last step completed in 00:00:00,1700
+    Last step completed in 00:00:00,4390
 </buildStep>
 <buildStep step="CombiningIntermediateTocFiles">
 Combining conceptual and API intermediate TOC files...
-    Last step completed in 00:00:00,0010
+    Last step completed in 00:00:00,0060
 </buildStep>
 <buildStep step="MergeCustomConfigs">
 Merging custom build component configurations
-C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Help\Working\BuildAssembler.config
+C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\Help\Working\BuildAssembler.config
   Updating reference topic configurations.
   No conceptual content.  Removing conceptual content components.
-    Last step completed in 00:00:00,0480
+    Last step completed in 00:00:00,0310
 </buildStep>
 <buildStep step="BuildTopics">
 Building help topics...
 Loading configuration...
 Processing topics...
 SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:MediaTek86.bddmanager.BddManager.connection] Unknown reference link target &#39;T:MySql.Data.MySqlClient.MySqlConnection&#39;.
-Processed 239 topic(s)
+Processed 242 topic(s)
 1 warning(s)
 CopyFromIndexComponent: &quot;reflection&quot; in-memory cache entries used: 6 of 15.
-CopyFromIndexComponent: &quot;comments&quot; in-memory cache entries used: 1 of 30.
-    Last step completed in 00:00:02,1928
+CopyFromIndexComponent: &quot;comments&quot; in-memory cache entries used: 4 of 30.
+    Last step completed in 00:00:04,9681
 </buildStep>
 <buildStep step="ExtractingHtmlInfo">
 Extracting HTML info for HTML Help 1 and/or website...
-Using LCID &#39;1033&#39;, code page &#39;65001&#39;, encoding charset &#39;UTF-8&#39;.
-Processing Help 1 files in C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Help\Working\Output\HtmlHelp1
-Processed 239 HTML files.  Sorting keywords and generating See Also indices.
-Saving HTML Help 1 keyword index to C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Help\Working\Output\HtmlHelp1\Documentation.hhk
-Saving HTML Help 1 table of contents to C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Help\Working\Output\HtmlHelp1\Documentation.hhc
-    Last step completed in 00:00:00,0220
+Using LCID &#39;1036&#39;, code page &#39;1252&#39;, encoding charset &#39;Windows-1252&#39;.
+Processing Help 1 files in C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\Help\Working\Output\HtmlHelp1
+Processed 242 HTML files.  Sorting keywords and generating See Also indices.
+Saving HTML Help 1 keyword index to C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\Help\Working\Output\HtmlHelp1\Documentation.hhk
+Saving HTML Help 1 table of contents to C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\Help\Working\Output\HtmlHelp1\Documentation.hhc
+    Last step completed in 00:00:00,0490
 </buildStep>
 <buildStep step="CopyStandardHelpContent">
 Copying standard help content...
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\AlertCaution.png -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Help\Working\Output\HtmlHelp1\icons\AlertCaution.png
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\AlertNote.png -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Help\Working\Output\HtmlHelp1\icons\AlertNote.png
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\AlertSecurity.png -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Help\Working\Output\HtmlHelp1\icons\AlertSecurity.png
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\CodeExample.png -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Help\Working\Output\HtmlHelp1\icons\CodeExample.png
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\favicon.ico -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Help\Working\Output\HtmlHelp1\icons\favicon.ico
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\privClass.gif -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Help\Working\Output\HtmlHelp1\icons\privClass.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\privDelegate.gif -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Help\Working\Output\HtmlHelp1\icons\privDelegate.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\privEnumeration.gif -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Help\Working\Output\HtmlHelp1\icons\privEnumeration.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\privEvent.gif -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Help\Working\Output\HtmlHelp1\icons\privEvent.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\privExtension.gif -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Help\Working\Output\HtmlHelp1\icons\privExtension.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\privField.gif -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Help\Working\Output\HtmlHelp1\icons\privField.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\privInterface.gif -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Help\Working\Output\HtmlHelp1\icons\privInterface.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\privMethod.gif -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Help\Working\Output\HtmlHelp1\icons\privMethod.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\privProperty.gif -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Help\Working\Output\HtmlHelp1\icons\privProperty.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\privStructure.gif -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Help\Working\Output\HtmlHelp1\icons\privStructure.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\protClass.gif -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Help\Working\Output\HtmlHelp1\icons\protClass.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\protDelegate.gif -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Help\Working\Output\HtmlHelp1\icons\protDelegate.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\protEnumeration.gif -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Help\Working\Output\HtmlHelp1\icons\protEnumeration.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\protEvent.gif -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Help\Working\Output\HtmlHelp1\icons\protEvent.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\protExtension.gif -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Help\Working\Output\HtmlHelp1\icons\protExtension.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\protField.gif -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Help\Working\Output\HtmlHelp1\icons\protField.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\protInterface.gif -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Help\Working\Output\HtmlHelp1\icons\protInterface.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\protMethod.gif -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Help\Working\Output\HtmlHelp1\icons\protMethod.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\protOperator.gif -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Help\Working\Output\HtmlHelp1\icons\protOperator.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\protProperty.gif -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Help\Working\Output\HtmlHelp1\icons\protProperty.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\protStructure.gif -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Help\Working\Output\HtmlHelp1\icons\protStructure.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\pubClass.gif -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Help\Working\Output\HtmlHelp1\icons\pubClass.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\pubDelegate.gif -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Help\Working\Output\HtmlHelp1\icons\pubDelegate.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\pubEnumeration.gif -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Help\Working\Output\HtmlHelp1\icons\pubEnumeration.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\pubEvent.gif -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Help\Working\Output\HtmlHelp1\icons\pubEvent.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\pubExtension.gif -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Help\Working\Output\HtmlHelp1\icons\pubExtension.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\pubField.gif -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Help\Working\Output\HtmlHelp1\icons\pubField.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\pubInterface.gif -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Help\Working\Output\HtmlHelp1\icons\pubInterface.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\pubMethod.gif -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Help\Working\Output\HtmlHelp1\icons\pubMethod.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\pubOperator.gif -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Help\Working\Output\HtmlHelp1\icons\pubOperator.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\pubProperty.gif -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Help\Working\Output\HtmlHelp1\icons\pubProperty.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\pubStructure.gif -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Help\Working\Output\HtmlHelp1\icons\pubStructure.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\SectionCollapsed.png -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Help\Working\Output\HtmlHelp1\icons\SectionCollapsed.png
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\SectionExpanded.png -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Help\Working\Output\HtmlHelp1\icons\SectionExpanded.png
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\Static.gif -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Help\Working\Output\HtmlHelp1\icons\Static.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\scripts\branding.js -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Help\Working\Output\HtmlHelp1\scripts\branding.js
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\styles\branding-cs-CZ.css -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Help\Working\Output\HtmlHelp1\styles\branding-cs-CZ.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\styles\branding-de-DE.css -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Help\Working\Output\HtmlHelp1\styles\branding-de-DE.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\styles\branding-en-US.css -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Help\Working\Output\HtmlHelp1\styles\branding-en-US.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\styles\branding-es-ES.css -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Help\Working\Output\HtmlHelp1\styles\branding-es-ES.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\styles\branding-fr-FR.css -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Help\Working\Output\HtmlHelp1\styles\branding-fr-FR.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\styles\branding-Help1.css -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Help\Working\Output\HtmlHelp1\styles\branding-Help1.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\styles\branding-HelpViewer.css -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Help\Working\Output\HtmlHelp1\styles\branding-HelpViewer.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\styles\branding-it-IT.css -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Help\Working\Output\HtmlHelp1\styles\branding-it-IT.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\styles\branding-ja-JP.css -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Help\Working\Output\HtmlHelp1\styles\branding-ja-JP.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\styles\branding-ko-KR.css -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Help\Working\Output\HtmlHelp1\styles\branding-ko-KR.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\styles\branding-pl-PL.css -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Help\Working\Output\HtmlHelp1\styles\branding-pl-PL.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\styles\branding-pt-BR.css -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Help\Working\Output\HtmlHelp1\styles\branding-pt-BR.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\styles\branding-ru-RU.css -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Help\Working\Output\HtmlHelp1\styles\branding-ru-RU.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\styles\branding-tr-TR.css -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Help\Working\Output\HtmlHelp1\styles\branding-tr-TR.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\styles\branding-Website.css -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Help\Working\Output\HtmlHelp1\styles\branding-Website.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\styles\branding-zh-CN.css -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Help\Working\Output\HtmlHelp1\styles\branding-zh-CN.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\styles\branding-zh-TW.css -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Help\Working\Output\HtmlHelp1\styles\branding-zh-TW.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\styles\branding.css -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Help\Working\Output\HtmlHelp1\styles\branding.css
-    Last step completed in 00:00:00,0470
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\AlertCaution.png -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\Help\Working\Output\HtmlHelp1\icons\AlertCaution.png
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\AlertNote.png -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\Help\Working\Output\HtmlHelp1\icons\AlertNote.png
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\AlertSecurity.png -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\Help\Working\Output\HtmlHelp1\icons\AlertSecurity.png
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\CodeExample.png -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\Help\Working\Output\HtmlHelp1\icons\CodeExample.png
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\favicon.ico -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\Help\Working\Output\HtmlHelp1\icons\favicon.ico
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\privClass.gif -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\Help\Working\Output\HtmlHelp1\icons\privClass.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\privDelegate.gif -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\Help\Working\Output\HtmlHelp1\icons\privDelegate.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\privEnumeration.gif -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\Help\Working\Output\HtmlHelp1\icons\privEnumeration.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\privEvent.gif -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\Help\Working\Output\HtmlHelp1\icons\privEvent.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\privExtension.gif -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\Help\Working\Output\HtmlHelp1\icons\privExtension.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\privField.gif -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\Help\Working\Output\HtmlHelp1\icons\privField.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\privInterface.gif -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\Help\Working\Output\HtmlHelp1\icons\privInterface.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\privMethod.gif -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\Help\Working\Output\HtmlHelp1\icons\privMethod.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\privProperty.gif -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\Help\Working\Output\HtmlHelp1\icons\privProperty.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\privStructure.gif -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\Help\Working\Output\HtmlHelp1\icons\privStructure.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\protClass.gif -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\Help\Working\Output\HtmlHelp1\icons\protClass.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\protDelegate.gif -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\Help\Working\Output\HtmlHelp1\icons\protDelegate.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\protEnumeration.gif -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\Help\Working\Output\HtmlHelp1\icons\protEnumeration.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\protEvent.gif -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\Help\Working\Output\HtmlHelp1\icons\protEvent.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\protExtension.gif -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\Help\Working\Output\HtmlHelp1\icons\protExtension.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\protField.gif -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\Help\Working\Output\HtmlHelp1\icons\protField.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\protInterface.gif -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\Help\Working\Output\HtmlHelp1\icons\protInterface.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\protMethod.gif -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\Help\Working\Output\HtmlHelp1\icons\protMethod.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\protOperator.gif -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\Help\Working\Output\HtmlHelp1\icons\protOperator.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\protProperty.gif -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\Help\Working\Output\HtmlHelp1\icons\protProperty.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\protStructure.gif -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\Help\Working\Output\HtmlHelp1\icons\protStructure.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\pubClass.gif -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\Help\Working\Output\HtmlHelp1\icons\pubClass.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\pubDelegate.gif -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\Help\Working\Output\HtmlHelp1\icons\pubDelegate.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\pubEnumeration.gif -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\Help\Working\Output\HtmlHelp1\icons\pubEnumeration.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\pubEvent.gif -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\Help\Working\Output\HtmlHelp1\icons\pubEvent.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\pubExtension.gif -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\Help\Working\Output\HtmlHelp1\icons\pubExtension.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\pubField.gif -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\Help\Working\Output\HtmlHelp1\icons\pubField.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\pubInterface.gif -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\Help\Working\Output\HtmlHelp1\icons\pubInterface.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\pubMethod.gif -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\Help\Working\Output\HtmlHelp1\icons\pubMethod.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\pubOperator.gif -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\Help\Working\Output\HtmlHelp1\icons\pubOperator.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\pubProperty.gif -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\Help\Working\Output\HtmlHelp1\icons\pubProperty.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\pubStructure.gif -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\Help\Working\Output\HtmlHelp1\icons\pubStructure.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\SectionCollapsed.png -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\Help\Working\Output\HtmlHelp1\icons\SectionCollapsed.png
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\SectionExpanded.png -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\Help\Working\Output\HtmlHelp1\icons\SectionExpanded.png
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\icons\Static.gif -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\Help\Working\Output\HtmlHelp1\icons\Static.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\scripts\branding.js -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\Help\Working\Output\HtmlHelp1\scripts\branding.js
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\styles\branding-cs-CZ.css -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\Help\Working\Output\HtmlHelp1\styles\branding-cs-CZ.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\styles\branding-de-DE.css -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\Help\Working\Output\HtmlHelp1\styles\branding-de-DE.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\styles\branding-en-US.css -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\Help\Working\Output\HtmlHelp1\styles\branding-en-US.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\styles\branding-es-ES.css -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\Help\Working\Output\HtmlHelp1\styles\branding-es-ES.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\styles\branding-fr-FR.css -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\Help\Working\Output\HtmlHelp1\styles\branding-fr-FR.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\styles\branding-Help1.css -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\Help\Working\Output\HtmlHelp1\styles\branding-Help1.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\styles\branding-HelpViewer.css -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\Help\Working\Output\HtmlHelp1\styles\branding-HelpViewer.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\styles\branding-it-IT.css -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\Help\Working\Output\HtmlHelp1\styles\branding-it-IT.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\styles\branding-ja-JP.css -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\Help\Working\Output\HtmlHelp1\styles\branding-ja-JP.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\styles\branding-ko-KR.css -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\Help\Working\Output\HtmlHelp1\styles\branding-ko-KR.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\styles\branding-pl-PL.css -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\Help\Working\Output\HtmlHelp1\styles\branding-pl-PL.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\styles\branding-pt-BR.css -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\Help\Working\Output\HtmlHelp1\styles\branding-pt-BR.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\styles\branding-ru-RU.css -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\Help\Working\Output\HtmlHelp1\styles\branding-ru-RU.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\styles\branding-tr-TR.css -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\Help\Working\Output\HtmlHelp1\styles\branding-tr-TR.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\styles\branding-Website.css -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\Help\Working\Output\HtmlHelp1\styles\branding-Website.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\styles\branding-zh-CN.css -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\Help\Working\Output\HtmlHelp1\styles\branding-zh-CN.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\styles\branding-zh-TW.css -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\Help\Working\Output\HtmlHelp1\styles\branding-zh-TW.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\styles\branding.css -&gt; C:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\Help\Working\Output\HtmlHelp1\styles\branding.css
+    Last step completed in 00:00:00,0460
 </buildStep>
 <buildStep step="GenerateHelpProject">
 Generating HTML Help 1 project file...
-    Last step completed in 00:00:00,0020
+    Last step completed in 00:00:00,0080
 </buildStep>
 <buildStep step="CompilingHelpFile">
 Compiling HTML Help 1 file...
@@ -197,7 +197,7 @@ Compiling HTML Help 1 file...
   
   
   
-  Compiling c:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Help\Working\Output\HtmlHelp1\Documentation.chm
+  Compiling c:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\Help\Working\Output\HtmlHelp1\Documentation.chm
   
   
   
@@ -205,9 +205,9 @@ Compiling HTML Help 1 file...
   
   Compile time: 0 minutes, 1 second
   
-  241	Topics
+  244	Topics
   
-  2,386	Local links
+  2,422	Local links
   
   0	Internet links
   
@@ -217,19 +217,19 @@ Compiling HTML Help 1 file...
   
   
   
-  Created c:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test3\Help\Working\Output\HtmlHelp1\Documentation.chm, 337,803 bytes
+  Created c:\Users\Antoi\Documents\Documentation\Les fichiers tecniques\test4\Help\Working\Output\HtmlHelp1\Documentation.chm, 497,106 bytes
   
-  Compression decreased file by 2,463,118 bytes.
+  Compression decreased file by 3,000,129 bytes.
   
-    Last step completed in 00:00:01,3533
+    Last step completed in 00:00:02,0491
 </buildStep>
 <buildStep step="CleanIntermediates">
 Removing intermediate files...
-    Last step completed in 00:00:00,0390
+    Last step completed in 00:00:00,0300
 </buildStep>
 <buildStep step="Completed">
 
-Build completed successfully at 27/05/2026 18:27:59.  Total time: 00:00:05,3716
+Build completed successfully at 28/05/2026 09:56:40.  Total time: 00:00:09,4622
 
 </buildStep>
 </shfbBuild>

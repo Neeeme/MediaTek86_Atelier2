@@ -95,8 +95,12 @@ namespace MediaTek86.controller
         /// </summary>
         /// <param name="absence">objet absence à modifier</param>
 <<<<<<< HEAD
+<<<<<<< HEAD
         /// <param name="date">date d'avant à garder</param>
         public void UpdateAbsence(Absence absence, DateTime? date)
+=======
+        public void UpdateAbsence(Absence absence, DateTime date)
+>>>>>>> parent of 1de88e6 (Delete MediaTek86_Atelier2 directory)
 =======
         public void UpdateAbsence(Absence absence, DateTime date)
 >>>>>>> parent of 1de88e6 (Delete MediaTek86_Atelier2 directory)

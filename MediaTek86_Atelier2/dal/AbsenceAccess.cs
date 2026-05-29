@@ -95,8 +95,12 @@ namespace MediaTek86.dal
         /// </summary>
         /// <param name="absence">objet absence à modifier</param>
 <<<<<<< HEAD
+<<<<<<< HEAD
         /// <param name="ancienneDate">objet absence à modifier en gardant l'ancienne date pour pouvoir correctement changer la date</param>
         public void UpdateAbsence(Absence absence, DateTime? ancienneDate)
+=======
+        public void UpdateAbsence(Absence absence, DateTime ancienneDate)
+>>>>>>> parent of 1de88e6 (Delete MediaTek86_Atelier2 directory)
 =======
         public void UpdateAbsence(Absence absence, DateTime ancienneDate)
 >>>>>>> parent of 1de88e6 (Delete MediaTek86_Atelier2 directory)

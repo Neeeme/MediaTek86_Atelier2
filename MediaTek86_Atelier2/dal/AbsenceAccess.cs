@@ -94,7 +94,8 @@ namespace MediaTek86.dal
         /// Demande de modification d'une absence sur un personnel
         /// </summary>
         /// <param name="absence">objet absence à modifier</param>
-        public void UpdateAbsence(Absence absence, DateTime ancienneDate)
+        /// <param name="ancienneDate">objet absence à modifier en gardant l'ancienne date pour pouvoir correctement changer la date</param>
+        public void UpdateAbsence(Absence absence, DateTime? ancienneDate)
         {
             if (access.Manager != null)
             {

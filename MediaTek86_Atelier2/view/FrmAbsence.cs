@@ -97,7 +97,7 @@ namespace MediaTek86.view
             {
                 if (dtpFinAbs.Value > dtpDebutAbs.Value)
                 {
-                    DateTime ancienneDate = DateTime.Now;
+                    DateTime? ancienneDate = null;
 
                     if (enCoursDeModifAbsence)
                     {
@@ -138,7 +138,7 @@ namespace MediaTek86.view
                 }
                 else
                 {
-                    MessageBox.Show("La date de fin doit être antérieure à la date de début.", "Information");
+                    MessageBox.Show("La date de fin doit être postérieure à la date de début.", "Information");
                 }
             }
             else

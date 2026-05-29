@@ -94,7 +94,8 @@ namespace MediaTek86.controller
         /// Demande de modification d'une absence
         /// </summary>
         /// <param name="absence">objet absence à modifier</param>
-        public void UpdateAbsence(Absence absence, DateTime date)
+        /// <param name="date">date d'avant à garder</param>
+        public void UpdateAbsence(Absence absence, DateTime? date)
         {
             absenceAccess.UpdateAbsence(absence, date);
         }

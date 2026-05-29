@@ -97,7 +97,11 @@ namespace MediaTek86.view
             {
                 if (dtpFinAbs.Value > dtpDebutAbs.Value)
                 {
+<<<<<<< HEAD
                     DateTime? ancienneDate = null;
+=======
+                    DateTime ancienneDate = DateTime.Now;
+>>>>>>> parent of 1de88e6 (Delete MediaTek86_Atelier2 directory)
 
                     if (enCoursDeModifAbsence)
                     {
@@ -138,7 +142,11 @@ namespace MediaTek86.view
                 }
                 else
                 {
+<<<<<<< HEAD
                     MessageBox.Show("La date de fin doit être postérieure à la date de début.", "Information");
+=======
+                    MessageBox.Show("La date de fin doit être antérieure à la date de début.", "Information");
+>>>>>>> parent of 1de88e6 (Delete MediaTek86_Atelier2 directory)
                 }
             }
             else
